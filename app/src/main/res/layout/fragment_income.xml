@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.manco.myapplication.fragments.IncomeFragment"
+    android:background="#0f171e">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="INCOME"
+        android:textSize="25sp"
+        android:id="@+id/tvTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#e6e6e6"
+        android:fontFamily="serif-monospace"
+        android:textStyle="normal|bold|italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose category:"
+        android:textSize="24sp"
+        android:id="@+id/tvChooseCategory"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerCategory"
+        android:layout_marginBottom="10dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/tvChooseCategory"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter title:"
+        android:textSize="24sp"
+        android:id="@+id/tvIncomeTitle"
+        android:layout_below="@id/spinnerCategory"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/etTitle"
+        android:hint="Title"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:layout_below="@+id/tvIncomeTitle"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e6e6e6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter amount:"
+        android:textSize="24sp"
+        android:id="@+id/tvAmount"
+        android:layout_below="@+id/etTitle"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etAmount"
+        android:imeOptions="actionDone"
+        android:hint="Amount"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tvAmount"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e6e6e6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter date:"
+        android:textSize="24sp"
+        android:id="@+id/tvDate"
+        android:layout_below="@+id/etAmount"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnIncomeDatePicker"
+        android:layout_below="@+id/tvDate"
+        android:hint="Date ..."
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:textSize="20sp"
+        android:textColor="#e6e6e6" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:id="@+id/btnSaveIncome"
+        android:background="@null"
+        android:textColor="#24b00d"
+        android:textSize="23sp"
+        android:fontFamily="serif-monospace"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

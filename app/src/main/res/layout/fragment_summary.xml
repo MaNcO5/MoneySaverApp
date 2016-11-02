@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.manco.myapplication.fragments.SummaryFragment"
+    android:background="#0f171e">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SUMMARY"
+        android:id="@+id/tvSummaryTitle"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="serif-monospace"
+        android:textStyle="normal|bold|italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income"
+        android:id="@+id/tvIncome"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="130dp"
+        android:layout_below="@+id/tvSummaryTitle"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="19sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expenses"
+        android:id="@+id/tvExpenses"
+        android:layout_below="@+id/tvSummaryTitle"
+        android:layout_toRightOf="@id/tvIncome"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="19sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total income:"
+        android:id="@+id/titleTotalIncome"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Total income"
+        android:id="@+id/tvTotalIncome"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toEndOf="@+id/titleTotalIncome"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Total expense"
+        android:id="@+id/tvTotalExpense"
+        android:layout_toEndOf="@+id/titleTotalExpense"
+        android:layout_alignTop="@+id/titleTotalExpense"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result:"
+        android:id="@+id/titleResult"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/titleTotalExpense"
+        android:layout_alignParentStart="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Result"
+        android:id="@+id/tvResult"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/titleTotalExpense"
+        android:layout_toEndOf="@+id/titleResult"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Show summary from:"
+        android:id="@+id/tvFromDate"
+        android:clickable="true"
+        android:layout_below="@+id/titleResult"
+        android:layout_alignParentStart="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Show summary to:"
+        android:id="@+id/tvToDate"
+        android:clickable="true"
+        android:layout_alignTop="@+id/tvFromDate"
+        android:layout_alignParentEnd="true"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/pieChartFrame"
+        android:layout_alignTop="@+id/tvTotalIncome"
+        android:layout_toEndOf="@+id/tvIncome"
+        android:layout_above="@+id/tvToDate"
+        android:layout_alignEnd="@+id/tvToDate">
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total expense:"
+        android:id="@+id/titleTotalExpense"
+        android:textColor="#e6e6e6"
+        android:fontFamily="cursive"
+        android:layout_below="@+id/titleTotalIncome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:background="@android:color/holo_green_light"
+        android:layout_alignTop="@+id/tvIncome"
+        android:layout_toLeftOf="@+id/tvSummaryTitle"
+        android:layout_marginRight="8dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignTop="@+id/tvExpenses"
+        android:layout_toRightOf="@+id/tvExpenses"
+        android:layout_toEndOf="@+id/tvExpenses"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:id="@+id/linearLayout"
+        android:layout_height="250dp"
+        android:layout_below="@+id/tvIncome"
+        android:layout_centerHorizontal="true">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listIncome"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listExpense"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:text="Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnUpdate"
+        android:background="@null"
+        android:textColor="#24b00d"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="serif-monospace"
+        android:textSize="23sp" />
+
+
+</RelativeLayout>
